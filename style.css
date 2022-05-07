@@ -10,9 +10,9 @@ form{
     width: 300px;
     height: fit-content;
     padding-bottom: 80px;
-    color: white;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: blue;
+    background-color: rgb(0, 255, 110);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,11 +22,14 @@ form{
     position: relative;
 }
 
+div{
+    margin-bottom: 30px;
+}
 input{
-    width: 95%; 
-    background-color: blue;
-    border: solid 2px transparent;
-    color: antiquewhite;
+    width: 90%; 
+    background-color: inherit;
+    color: black;
+    border-style: hidden;
 }
 
 
@@ -38,57 +41,85 @@ input{
 }
 
 #email:hover, #password:hover{
-    border: solid 1px white;
+    border: solid 1px black;
     height: 42px;
     transition: .8s;
     cursor: pointer;
 }
 
 #email:hover hr, #password:hover hr{
-    border: solid 6px red;
+    width: 93%;
+    border: solid 6px rgb(233, 14, 65);
     transition: 0.8s;
 }
 hr{
-    border: solid 0.05px red;
+    border: solid 0.05px rgb(233, 14, 65);
     border-radius: 0 0px 3px 3px; 
 }
 
 button{
-    background-color: transparent;
+    position: relative;
+    background-color: inherit;
     width: 120px;
     height: 30px;
-    font-size: 15px;
-    color: red;
-    border: solid 2px transparent;
-    border-radius: 3px;
-    animation: move ease-in-out 2s infinite;
-}
-
-button:hover{
+    border: solid 1px transparent;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    overflow: hidden;
 }
 
+button p{
+    position: relative;
+    font-size: 15px;
+    z-index: 10;
+    color: black;
+}
+
+
+button::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(rgb(233, 14, 65), blue);
+    width: 150px;
+    height: 20px;
+    animation: move linear 1.5s infinite;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    inset: 1px;
+}
 @keyframes move {
-    
     0%{
-        border-top: solid 2px red;
-    }
-    20%{
-        border-top: none;
-    }
-    20%{
-        border-right: solid 2px red;
-    }
-    45%{
-        border-right: none;
-    }
-    45%{
-        border-bottom: solid 2px red;
-    }
-    55%{
-        border-bottom: none;
+        transform: rotate(0deg);
     }
     100%{
-        border-left: solid 2px red;
+        transform: rotate(360deg);
+    }
+   
+}
+
+@media (max-width: 450px ) {
+    form{
+        width: 80%;
+    }
+    .heading{
+        font-size: 90%;
+        text-align: center;
+        padding: 5px;
+    }
+    #email, #password{
+        width: 80%;
+        height: 30px;
+        padding-top: 2px;
+    }
+    input{
+        width: 93%; 
+       margin-left: 4px;
     }
 }
