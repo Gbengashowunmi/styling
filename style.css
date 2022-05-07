@@ -3,12 +3,13 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 form{
     width: 300px;
-    height: 400px;
+    height: fit-content;
+    padding-bottom: 80px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: blue;
@@ -22,11 +23,13 @@ form{
 }
 
 input{
-    width: 190px;
-    background-color: transparent;
-    border: none;
+    width: 95%; 
+    background-color: blue;
+    border: solid 2px transparent;
     color: antiquewhite;
 }
+
+
 
 #email, #password{
     width: 200px;
@@ -36,28 +39,28 @@ input{
 
 #email:hover, #password:hover{
     border: solid 1px white;
-    height: 40px;
+    height: 42px;
     transition: .8s;
     cursor: pointer;
 }
 
 #email:hover hr, #password:hover hr{
-    color: red;
     border: solid 6px red;
-    border-radius: 0 0px 3px 3px;
     transition: 0.8s;
 }
 hr{
-    color: red;
+    border: solid 0.05px red;
+    border-radius: 0 0px 3px 3px; 
 }
 
 button{
     background-color: transparent;
-    font-size: larger;
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
     color: red;
-    border: transparent;
+    border: solid 2px transparent;
     border-radius: 3px;
-    padding: 3px 40px 3px 40px;
     animation: move ease-in-out 2s infinite;
 }
 
