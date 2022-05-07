@@ -22,11 +22,15 @@ form{
     position: relative;
 }
 
-div{
+.username-comment, .password-comment{
     margin-bottom: 30px;
+
 }
+
+
+
 input{
-    margin-left: 4px;
+    margin-left: 6px;
     width: 90%; 
     background-color: transparent;
     color: black;
@@ -40,25 +44,29 @@ input{
     width: 200px;
     height: 30px;
     border-radius: 3px;
+    transition: .8s;
 }
 
 #email:hover, #password:hover{
     border: solid 1px black;
-    height: 42px;
+    height: 51px;
     transition: .8s;
     cursor: pointer;
 }
 
 #email:hover hr, #password:hover hr{
-    width: 93%;
-    border: solid 6px rgb(233, 14, 65);
+    width: 98%;
+    height: 20px;
+    background-color: rgb(233, 14, 65);
+    color: rgb(233, 14, 65) ;
     transition: 0.8s;
 }
 hr{
-    border: solid 0.05px rgb(233, 14, 65);
-    border-radius: 0 0px 3px 3px; 
+    height: 0;
+    border-radius: 0 0 5px 5px; 
     background-color: rgb(233, 14, 65);
     color: rgb(233, 14, 65) ;
+    transition: 0.8s;
 }
 
 button{
@@ -74,12 +82,11 @@ button{
     cursor: pointer;
     overflow: hidden;
 }
-
-p{
+button p{
     position: relative;
     font-size: 15px;
     font-weight: bold;
-    z-index: 10;
+    z-index: 2;
     color: black;
 }
 
@@ -90,7 +97,7 @@ button::before{
     background: linear-gradient(rgb(233, 14, 65), blue);
     width: 150px;
     height: 20px;
-    animation: move linear 1.5s infinite;
+    animation: move linear 2s infinite;
 }
 
 button::after{
