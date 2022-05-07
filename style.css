@@ -26,10 +26,12 @@ div{
     margin-bottom: 30px;
 }
 input{
+    margin-left: 4px;
     width: 90%; 
-    background-color: inherit;
+    background-color: transparent;
     color: black;
-    border-style: hidden;
+    border-style: none;
+    border-color: transparent;
 }
 
 
@@ -55,6 +57,8 @@ input{
 hr{
     border: solid 0.05px rgb(233, 14, 65);
     border-radius: 0 0px 3px 3px; 
+    background-color: rgb(233, 14, 65);
+    color: rgb(233, 14, 65) ;
 }
 
 button{
