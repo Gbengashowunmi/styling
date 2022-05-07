@@ -71,9 +71,10 @@ button{
     overflow: hidden;
 }
 
-button p{
+p{
     position: relative;
     font-size: 15px;
+    font-weight: bold;
     z-index: 10;
     color: black;
 }
