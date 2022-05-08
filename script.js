@@ -44,7 +44,8 @@ button.addEventListener('click', function(eh){
         general.innerHTML = '';
         entPass.innerHTML = '';
         final.style.color = 'blue';
-        setTimeout(function(){ final.innerHTML="your name has entered the book of life. Fear no more' }, 1000);
-        setTimeout(function(){ final.innerHTML= "" }, 3000);
+        final.innerHTML="your name has entered the book of life. Fear no more' 
         }
+
+
 })
